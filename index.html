@@ -1,24 +1,28 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="个人学术主页">
-    <title>Your Name | Personal Website</title>
+    <meta
+      name="description"
+      content="Mingxin Wu, master's student in astronomy at the University of Science and Technology of China."
+    >
+    <meta name="author" content="Mingxin Wu">
+    <title>Mingxin Wu | Astronomy</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="返回首页">Mingxin Wu</a>
-      <nav class="nav" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="Back to home">Mingxin Wu</a>
+      <nav class="nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="theme-toggle" type="button" aria-label="切换明暗主题" title="切换明暗主题">
-        <span class="theme-icon" aria-hidden="true">◐</span>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+        <span class="theme-icon" aria-hidden="true">*</span>
       </button>
     </header>
 
@@ -26,16 +30,32 @@
       <section class="hero" aria-labelledby="hero-title">
         <canvas id="sky-map" class="sky-map" aria-hidden="true"></canvas>
         <div class="hero-inner">
-          <p class="eyebrow">Personal Academic Website</p>
-          <h1 id="hero-title">Mingxin Wu (吴铭鑫)</h1>
-          <p class="lead">
-            One sentence introduction goes here. Replace this with your research identity, affiliation,
-            or the question that drives your work.
-          </p>
-          <div class="hero-actions" aria-label="快捷链接">
-            <a class="button primary" href="#projects">View Work</a>
-            <a class="button secondary" href="#contact">Get in Touch</a>
+          <div class="hero-copy">
+            <p class="eyebrow">Astronomy · USTC</p>
+            <h1 id="hero-title">Mingxin Wu</h1>
+            <p class="lead">
+              Master's student in astronomy at the University of Science and Technology of China.
+              This personal website collects my research notes, selected projects, publications,
+              and academic links.
+            </p>
+            <div class="hero-actions" aria-label="Quick links">
+              <a class="button primary" href="#research">Research</a>
+              <a class="button secondary" href="#contact">Contact</a>
+            </div>
           </div>
+
+          <figure class="profile-panel">
+            <img
+              class="profile-photo"
+              src="assets/profile.jpg"
+              onerror="this.onerror=null; this.src='assets/profile-placeholder.svg';"
+              alt="Portrait of Mingxin Wu"
+            >
+            <figcaption>
+              <strong>Mingxin Wu</strong>
+              <span>Department of Astronomy, USTC</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -46,12 +66,13 @@
         </div>
         <div class="copy">
           <p>
-            Add a short biography here. Mention your current position, institution, research area,
-            and a few keywords that help visitors understand what you do.
+            I am a master's student in the Department of Astronomy at the University of Science
+            and Technology of China. Replace this paragraph with your own biography, advisor,
+            research group, and academic background.
           </p>
           <p>
-            This template is intentionally text-light for now. You can expand this section later
-            without changing the layout.
+            You can keep this page concise at first: a clear identity, several research keywords,
+            and reliable contact links are already enough for a useful personal website.
           </p>
         </div>
       </section>
@@ -64,18 +85,18 @@
         <div class="feature-grid">
           <article class="feature">
             <span class="feature-index">01</span>
-            <h3>Research Direction</h3>
-            <p>Add one focused research direction, method, or scientific question.</p>
+            <h3>Time-domain Astronomy</h3>
+            <p>Add your specific interests, such as transient surveys, light curves, or follow-up observations.</p>
           </article>
           <article class="feature">
             <span class="feature-index">02</span>
-            <h3>Research Direction</h3>
-            <p>Add one focused research direction, method, or scientific question.</p>
+            <h3>Transient Phenomena</h3>
+            <p>Add the objects or physical processes you study, for example TDEs, supernovae, or AGN variability.</p>
           </article>
           <article class="feature">
             <span class="feature-index">03</span>
-            <h3>Research Direction</h3>
-            <p>Add one focused research direction, method, or scientific question.</p>
+            <h3>Data Analysis</h3>
+            <p>Add methods, instruments, surveys, or pipelines that are central to your current work.</p>
           </article>
         </div>
       </section>
@@ -92,7 +113,7 @@
               <h3>Project Title</h3>
             </div>
             <p>Short project summary. Link to code, data, paper, or a short note when ready.</p>
-            <a href="#" aria-label="打开项目链接">Details</a>
+            <a href="#" aria-label="Open project link">Details</a>
           </article>
           <article class="project">
             <div>
@@ -100,7 +121,7 @@
               <h3>Project Title</h3>
             </div>
             <p>Short project summary. Keep each item compact so the page remains easy to scan.</p>
-            <a href="#" aria-label="打开项目链接">Details</a>
+            <a href="#" aria-label="Open project link">Details</a>
           </article>
           <article class="project">
             <div>
@@ -108,7 +129,7 @@
               <h3>Project Title</h3>
             </div>
             <p>Short project summary. Add more project blocks by copying this article.</p>
-            <a href="#" aria-label="打开项目链接">Details</a>
+            <a href="#" aria-label="Open project link">Details</a>
           </article>
         </div>
       </section>
@@ -138,11 +159,11 @@
         <div>
           <p class="section-label">Contact</p>
           <h2>Contact and Links</h2>
-          <p>Add your email, GitHub, Google Scholar, ORCID, institution page, or CV link.</p>
+          <p>Add your USTC email, GitHub, Google Scholar, ORCID, institution page, or CV link.</p>
         </div>
-        <div class="link-row" aria-label="个人链接">
+        <div class="link-row" aria-label="Personal links">
           <a href="mailto:your.email@example.com">Email</a>
-          <a href="#">GitHub</a>
+          <a href="https://github.com/whitesoul-keke">GitHub</a>
           <a href="#">Scholar</a>
           <a href="#">CV</a>
         </div>
@@ -150,7 +171,7 @@
     </main>
 
     <footer class="footer">
-      <span>© <span id="year"></span> Mingxin Wu</span>
+      <span>&copy; <span id="year"></span> Mingxin Wu</span>
       <a href="#top">Back to top</a>
     </footer>
 

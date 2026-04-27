@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Profile photo placeholder</title>
+  <desc id="desc">Astronomy themed placeholder for a personal portrait.</desc>
+  <defs>
+    <linearGradient id="space" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#09111d"/>
+      <stop offset="0.55" stop-color="#163247"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="38%" r="44%">
+      <stop offset="0" stop-color="#f8efe2" stop-opacity="0.95"/>
+      <stop offset="0.42" stop-color="#67d5c8" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#67d5c8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#space)"/>
+  <circle cx="400" cy="345" r="270" fill="url(#halo)"/>
+  <g fill="#f8efe2" opacity="0.85">
+    <circle cx="100" cy="120" r="4"/>
+    <circle cx="230" cy="210" r="2"/>
+    <circle cx="665" cy="155" r="3"/>
+    <circle cx="705" cy="365" r="2"/>
+    <circle cx="134" cy="640" r="3"/>
+    <circle cx="625" cy="735" r="4"/>
+    <circle cx="285" cy="785" r="2"/>
+    <circle cx="514" cy="96" r="2"/>
+  </g>
+  <path d="M138 398c110-66 217-88 320-57 82 24 147 78 204 142" fill="none" stroke="#91c7ef" stroke-width="4" opacity="0.64"/>
+  <path d="M180 560c135-48 271-42 408 18" fill="none" stroke="#f0ad78" stroke-width="3" opacity="0.58"/>
+  <circle cx="400" cy="338" r="112" fill="#f8efe2" opacity="0.92"/>
+  <path d="M214 840c31-159 108-239 186-239s155 80 186 239" fill="#f8efe2" opacity="0.92"/>
+  <text x="400" y="930" fill="#f8efe2" font-family="Arial, sans-serif" font-size="38" font-weight="700" text-anchor="middle">Add profile.jpg</text>
+</svg>
