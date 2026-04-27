@@ -1,11 +1,8 @@
 const root = document.documentElement;
 const toggle = document.querySelector(".theme-toggle");
 const storedTheme = localStorage.getItem("theme");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-if (storedTheme || prefersDark) {
-  root.dataset.theme = storedTheme || "dark";
-}
+root.dataset.theme = storedTheme || "dark";
 
 toggle.addEventListener("click", () => {
   const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
@@ -18,7 +15,7 @@ document.querySelector("#year").textContent = new Date().getFullYear();
 
 const canvas = document.querySelector("#sky-map");
 const context = canvas.getContext("2d");
-const stars = Array.from({ length: 130 }, (_, index) => ({
+const stars = Array.from({ length: 86 }, (_, index) => ({
   x: (index * 47) % 100,
   y: (index * 83) % 100,
   radius: 0.7 + ((index * 13) % 24) / 20,
@@ -39,7 +36,6 @@ function drawSky() {
 
   const background = color("--bg");
   const accent = color("--accent");
-  const warm = color("--warm");
   const line = color("--line");
 
   context.fillStyle = background;
@@ -47,10 +43,10 @@ function drawSky() {
 
   context.strokeStyle = line;
   context.lineWidth = 1;
-  context.globalAlpha = 0.42;
+  context.globalAlpha = 0.18;
 
-  for (let i = 0; i < 7; i += 1) {
-    const y = height * (0.18 + i * 0.105);
+  for (let i = 0; i < 4; i += 1) {
+    const y = height * (0.22 + i * 0.14);
     context.beginPath();
     context.moveTo(0, y);
     context.bezierCurveTo(width * 0.28, y - 34, width * 0.62, y + 34, width, y - 8);
@@ -64,13 +60,13 @@ function drawSky() {
     const y = (star.y / 100) * height;
     const pulse = 0.75 + Math.sin((Date.now() / 1800 + star.phase) * 0.017) * 0.25;
     context.beginPath();
-    context.fillStyle = index % 9 === 0 ? warm : accent;
-    context.globalAlpha = index % 5 === 0 ? 0.72 : 0.38;
+    context.fillStyle = accent;
+    context.globalAlpha = index % 6 === 0 ? 0.56 : 0.28;
     context.arc(x, y, star.radius * pulse, 0, Math.PI * 2);
     context.fill();
   });
 
-  context.globalAlpha = 0.5;
+  context.globalAlpha = 0.38;
   context.strokeStyle = accent;
   context.lineWidth = 1.2;
   context.beginPath();
