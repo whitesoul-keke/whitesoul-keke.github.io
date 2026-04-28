@@ -332,6 +332,11 @@ h3 {
   border-color: var(--accent);
 }
 
+.hobby-card h3,
+.hobby-card p {
+  text-decoration: none;
+}
+
 .feature-index {
   display: block;
   margin-bottom: 34px;
@@ -416,7 +421,9 @@ h3 {
 }
 
 .subpage-hero h1 {
-  max-width: 12ch;
+  max-width: none;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 1;
 }
 
 .photo-grid,
