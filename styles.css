@@ -351,11 +351,15 @@ h3 {
   margin-left: 8px;
 }
 
-.contact {
+.contact-body {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 32px;
-  align-items: center;
+  gap: 18px;
+  align-content: start;
+}
+
+.contact .link-row {
+  margin-top: 0;
+  justify-content: flex-start;
 }
 
 .footer {
