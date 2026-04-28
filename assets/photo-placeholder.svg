@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Photo placeholder</title>
+  <desc id="desc">Minimal placeholder image for a photography series.</desc>
+  <rect width="1200" height="800" fill="#0d1520"/>
+  <rect x="1" y="1" width="1198" height="798" fill="none" stroke="#263544" stroke-width="2"/>
+  <circle cx="930" cy="190" r="70" fill="#77d8cc" opacity="0.38"/>
+  <path d="M0 612 238 402l154 128 190-220 618 492H0z" fill="#121d2a"/>
+  <path d="M0 650 280 458l166 118 164-160 590 386H0z" fill="#263544" opacity="0.7"/>
+  <text x="600" y="724" fill="#eef5f8" font-family="Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle">Add Photo</text>
+</svg>
