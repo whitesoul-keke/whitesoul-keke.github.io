@@ -261,6 +261,12 @@ h3 {
   margin-right: auto;
 }
 
+.content-wrap {
+  width: min(1060px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .two-column {
   display: grid;
   grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
@@ -284,6 +290,10 @@ h3 {
 
 .stacked-heading {
   display: block;
+}
+
+.block-heading {
+  margin-bottom: 28px;
 }
 
 .feature-grid {
@@ -343,7 +353,8 @@ h3 {
   display: grid;
   gap: 18px;
   margin: 0;
-  padding-left: 1.2rem;
+  padding-left: 0;
+  list-style-position: inside;
 }
 
 .publication-list li {
@@ -363,6 +374,7 @@ h3 {
   display: grid;
   gap: 18px;
   align-content: start;
+  max-width: 760px;
 }
 
 .contact .link-row {
