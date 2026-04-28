@@ -66,15 +66,6 @@ function drawSky() {
     context.fill();
   });
 
-  context.globalAlpha = 0.38;
-  context.strokeStyle = accent;
-  context.lineWidth = 1.2;
-  context.beginPath();
-  context.moveTo(width * 0.56, height * 0.24);
-  context.lineTo(width * 0.68, height * 0.34);
-  context.lineTo(width * 0.76, height * 0.28);
-  context.lineTo(width * 0.86, height * 0.42);
-  context.stroke();
   context.globalAlpha = 1;
 }
 
