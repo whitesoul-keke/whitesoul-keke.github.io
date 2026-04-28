@@ -36,22 +36,8 @@ function drawSky() {
 
   const background = color("--bg");
   const accent = color("--accent");
-  const line = color("--line");
-
   context.fillStyle = background;
   context.fillRect(0, 0, width, height);
-
-  context.strokeStyle = line;
-  context.lineWidth = 1;
-  context.globalAlpha = 0.18;
-
-  for (let i = 0; i < 4; i += 1) {
-    const y = height * (0.22 + i * 0.14);
-    context.beginPath();
-    context.moveTo(0, y);
-    context.bezierCurveTo(width * 0.28, y - 34, width * 0.62, y + 34, width, y - 8);
-    context.stroke();
-  }
 
   context.globalAlpha = 1;
 
