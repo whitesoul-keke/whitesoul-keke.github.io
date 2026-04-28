@@ -281,10 +281,8 @@ h3 {
 }
 
 .section-heading {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   gap: 24px;
-  align-items: end;
   margin-bottom: 28px;
 }
 
