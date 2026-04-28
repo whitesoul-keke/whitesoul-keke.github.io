@@ -300,17 +300,36 @@ h3 {
   gap: 12px;
 }
 
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
 .feature,
-.project {
+.project,
+.hobby-card,
+.placeholder-card {
   border: 1px solid var(--line);
   border-radius: 6px;
   background: color-mix(in srgb, var(--surface) 72%, transparent);
   box-shadow: var(--shadow);
 }
 
-.feature {
+.feature,
+.hobby-card,
+.placeholder-card {
   min-height: 190px;
   padding: 22px;
+}
+
+.hobby-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hobby-card:hover {
+  border-color: var(--accent);
 }
 
 .feature-index {
@@ -391,6 +410,28 @@ h3 {
   color: var(--text);
 }
 
+.subpage-hero {
+  padding: clamp(82px, 12vw, 132px) clamp(18px, 4vw, 54px) clamp(58px, 8vw, 92px);
+  border-bottom: 1px solid var(--line);
+}
+
+.subpage-hero h1 {
+  max-width: 12ch;
+}
+
+.photo-grid,
+.music-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.placeholder-card p,
+.hobby-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .contact {
   display: block;
 }
@@ -438,7 +479,10 @@ h3 {
   }
 
   .two-column,
-  .feature-grid {
+  .feature-grid,
+  .hobby-grid,
+  .photo-grid,
+  .music-list {
     grid-template-columns: 1fr;
   }
 

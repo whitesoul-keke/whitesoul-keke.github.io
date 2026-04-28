@@ -8,13 +8,15 @@ toggle.addEventListener("click", () => {
   const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
   root.dataset.theme = nextTheme;
   localStorage.setItem("theme", nextTheme);
-  drawSky();
+  if (canvas) {
+    drawSky();
+  }
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
 const canvas = document.querySelector("#sky-map");
-const context = canvas.getContext("2d");
+const context = canvas ? canvas.getContext("2d") : null;
 const stars = Array.from({ length: 86 }, (_, index) => ({
   x: (index * 47) % 100,
   y: (index * 83) % 100,
@@ -55,6 +57,8 @@ function drawSky() {
   context.globalAlpha = 1;
 }
 
-drawSky();
-window.addEventListener("resize", drawSky);
-window.setInterval(drawSky, 2400);
+if (canvas) {
+  drawSky();
+  window.addEventListener("resize", drawSky);
+  window.setInterval(drawSky, 2400);
+}
