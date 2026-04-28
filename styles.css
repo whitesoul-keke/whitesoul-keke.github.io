@@ -282,6 +282,10 @@ h3 {
   margin-bottom: 28px;
 }
 
+.stacked-heading {
+  display: block;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -351,6 +355,10 @@ h3 {
   margin-left: 8px;
 }
 
+.contact {
+  display: block;
+}
+
 .contact-body {
   display: grid;
   gap: 18px;
@@ -393,8 +401,7 @@ h3 {
   }
 
   .two-column,
-  .feature-grid,
-  .contact {
+  .feature-grid {
     grid-template-columns: 1fr;
   }
 
