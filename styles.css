@@ -364,6 +364,33 @@ h3 {
   margin-left: 8px;
 }
 
+.teaching-list {
+  display: grid;
+  gap: 18px;
+}
+
+.teaching-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.teaching-item h3 {
+  margin-bottom: 6px;
+}
+
+.teaching-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.teaching-date {
+  white-space: nowrap;
+  color: var(--text);
+}
+
 .contact {
   display: block;
 }
@@ -417,6 +444,15 @@ h3 {
 
   .project {
     grid-template-columns: 1fr;
+  }
+
+  .teaching-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .teaching-date {
+    white-space: normal;
   }
 }
 
