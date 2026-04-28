@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Album cover placeholder</title>
+  <desc id="desc">Minimal placeholder image for an album cover.</desc>
+  <rect width="900" height="900" fill="#0d1520"/>
+  <rect x="1" y="1" width="898" height="898" fill="none" stroke="#263544" stroke-width="2"/>
+  <circle cx="450" cy="450" r="230" fill="none" stroke="#77d8cc" stroke-width="18" opacity="0.48"/>
+  <circle cx="450" cy="450" r="64" fill="#77d8cc" opacity="0.72"/>
+  <path d="M204 612c88-80 168-119 240-119 94 0 160 51 252 120" fill="none" stroke="#a8ccef" stroke-width="10" opacity="0.42"/>
+  <text x="450" y="780" fill="#eef5f8" font-family="Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle">Album Cover</text>
+</svg>

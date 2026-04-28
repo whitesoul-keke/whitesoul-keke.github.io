@@ -433,6 +433,57 @@ h3 {
   gap: 12px;
 }
 
+.album-list {
+  display: grid;
+  gap: clamp(58px, 8vw, 92px);
+}
+
+.album-entry {
+  display: grid;
+  grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
+  gap: clamp(32px, 7vw, 82px);
+  align-items: center;
+}
+
+.album-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.album-copy {
+  max-width: 620px;
+  text-align: center;
+}
+
+.album-copy h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.2;
+}
+
+.album-copy p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.08rem;
+}
+
+.album-copy p + p {
+  margin-top: 14px;
+}
+
+.album-date {
+  margin-top: 16px !important;
+  font-size: 1.35rem !important;
+}
+
+.album-genre {
+  color: var(--muted) !important;
+  font-style: italic;
+}
+
 .placeholder-card p,
 .hobby-card p {
   margin: 0;
@@ -489,8 +540,17 @@ h3 {
   .feature-grid,
   .hobby-grid,
   .photo-grid,
-  .music-list {
+  .music-list,
+  .album-entry {
     grid-template-columns: 1fr;
+  }
+
+  .album-cover {
+    max-width: 360px;
+  }
+
+  .album-copy {
+    text-align: left;
   }
 
   .project {
