@@ -66,6 +66,8 @@ if (canvas) {
 const lightbox = document.querySelector("#lightbox");
 const lightboxImage = document.querySelector(".lightbox-image");
 const lightboxCaption = document.querySelector(".lightbox-caption");
+const lightboxCaptionTitle = document.querySelector(".lightbox-caption strong");
+const lightboxCaptionText = document.querySelector(".lightbox-caption span");
 const lightboxClose = document.querySelector(".lightbox-close");
 
 function closeLightbox() {
@@ -78,13 +80,16 @@ function closeLightbox() {
   document.body.style.overflow = "";
 }
 
-if (lightbox && lightboxImage && lightboxCaption && lightboxClose) {
+if (lightbox && lightboxImage && lightboxCaption && lightboxCaptionTitle && lightboxCaptionText && lightboxClose) {
   document.querySelectorAll(".photo-card img").forEach((image) => {
     image.addEventListener("click", () => {
-      const caption = image.closest(".photo-card")?.querySelector("figcaption")?.innerText || image.alt;
+      const card = image.closest(".photo-card");
+      const title = card?.querySelector("figcaption strong")?.textContent || image.alt;
+      const description = card?.querySelector("figcaption span")?.textContent || "";
       lightboxImage.src = image.currentSrc || image.src;
-      lightboxImage.alt = image.alt || caption;
-      lightboxCaption.textContent = caption;
+      lightboxImage.alt = image.alt || title;
+      lightboxCaptionTitle.textContent = title;
+      lightboxCaptionText.textContent = description;
       lightbox.classList.add("is-open");
       lightbox.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";

@@ -519,10 +519,16 @@ h3 {
 }
 
 .lightbox-caption {
+  display: grid;
+  gap: 4px;
   max-width: min(900px, 94vw);
   margin: 14px 0 0;
   color: var(--muted);
   text-align: center;
+}
+
+.lightbox-caption strong {
+  color: var(--text);
 }
 
 .lightbox-close {
