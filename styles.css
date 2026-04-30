@@ -449,6 +449,11 @@ h3 {
   text-align: right;
 }
 
+.series-heading > div {
+  display: grid;
+  justify-items: end;
+}
+
 .series-heading h2 {
   color: var(--accent-strong);
   font-size: clamp(1.8rem, 3vw, 2.6rem);
@@ -662,6 +667,10 @@ h3 {
   .series-heading {
     justify-content: flex-start;
     text-align: left;
+  }
+
+  .series-heading > div {
+    justify-items: start;
   }
 
   .album-cover {
