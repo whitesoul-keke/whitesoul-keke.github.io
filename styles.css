@@ -446,6 +446,7 @@ h3 {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 24px;
+  text-align: right;
 }
 
 .series-heading h2 {
@@ -478,6 +479,7 @@ h3 {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background: var(--surface);
+  cursor: zoom-in;
 }
 
 .photo-card figcaption {
@@ -492,6 +494,50 @@ h3 {
 
 .photo-card span {
   color: var(--muted);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  place-items: center;
+  padding: 28px;
+  background: rgba(3, 7, 12, 0.92);
+}
+
+.lightbox.is-open {
+  display: grid;
+}
+
+.lightbox-image {
+  max-width: min(1200px, 94vw);
+  max-height: 84vh;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.lightbox-caption {
+  max-width: min(900px, 94vw);
+  margin: 14px 0 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .album-list {
@@ -609,6 +655,7 @@ h3 {
 
   .series-heading {
     justify-content: flex-start;
+    text-align: left;
   }
 
   .album-cover {

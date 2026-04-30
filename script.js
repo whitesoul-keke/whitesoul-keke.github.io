@@ -62,3 +62,46 @@ if (canvas) {
   window.addEventListener("resize", drawSky);
   window.setInterval(drawSky, 2400);
 }
+
+const lightbox = document.querySelector("#lightbox");
+const lightboxImage = document.querySelector(".lightbox-image");
+const lightboxCaption = document.querySelector(".lightbox-caption");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+function closeLightbox() {
+  if (!lightbox) {
+    return;
+  }
+
+  lightbox.classList.remove("is-open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+if (lightbox && lightboxImage && lightboxCaption && lightboxClose) {
+  document.querySelectorAll(".photo-card img").forEach((image) => {
+    image.addEventListener("click", () => {
+      const caption = image.closest(".photo-card")?.querySelector("figcaption")?.innerText || image.alt;
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt || caption;
+      lightboxCaption.textContent = caption;
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+  });
+}
