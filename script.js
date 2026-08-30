@@ -84,12 +84,13 @@ if (lightbox && lightboxImage && lightboxCaption && lightboxCaptionTitle && ligh
   document.querySelectorAll(".photo-card img").forEach((image) => {
     image.addEventListener("click", () => {
       const card = image.closest(".photo-card");
-      const title = card?.querySelector("figcaption strong")?.textContent || image.alt;
+      const title = card?.querySelector("figcaption strong")?.textContent || "";
       const description = card?.querySelector("figcaption span")?.textContent || "";
       lightboxImage.src = image.currentSrc || image.src;
-      lightboxImage.alt = image.alt || title;
+      lightboxImage.alt = image.alt || title || "Full-size photo";
       lightboxCaptionTitle.textContent = title;
       lightboxCaptionText.textContent = description;
+      lightboxCaption.hidden = !title && !description;
       lightbox.classList.add("is-open");
       lightbox.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
@@ -110,3 +111,5 @@ if (lightbox && lightboxImage && lightboxCaption && lightboxCaptionTitle && ligh
     }
   });
 }
+
+
