@@ -133,10 +133,10 @@ a {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
   gap: clamp(36px, 6vw, 82px);
   align-items: center;
-  width: min(1060px, 100%);
+  width: min(1160px, 100%);
   margin: 0 auto;
 }
 
@@ -638,7 +638,7 @@ h3 {
   }
 
   .profile-panel {
-    max-width: 360px;
+    max-width: 420px;
   }
 }
 
@@ -719,4 +719,6 @@ h3 {
     flex-direction: column;
   }
 }
+
+
 
